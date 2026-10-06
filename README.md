@@ -119,3 +119,19 @@ Planned improvements include:
 ## Purpose
 
 This project represents my first practical Angular application and demonstrates the integration of an Angular frontend with an ASP.NET Core backend to create a complete end-to
+
+
+## Backend
+
+This frontend requires the corresponding ASP.NET Core Web API to be running.
+
+Backend repository:
+
+[EmployeeManagement-ASP.NET-Core](https://github.com/Hadi-awan68/EmployeeManagement-ASP.NET-Core)
+
+The Angular application is configured to communicate with the backend API through:
+
+```text
+https://localhost:7049/api/Employees
+```
+
