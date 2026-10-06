@@ -1,59 +1,121 @@
-# EmployeeManagementUi
+# Employee Management System — Angular Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.0.
+An Angular 22 frontend application integrated with an ASP.NET Core Web API for managing employee records through a complete CRUD workflow.
 
-## Development server
+This project was developed as my first Angular application and as a practical step toward building full-stack applications using Angular and .NET.
 
-To start a local development server, run:
+## Tech Stack
+
+* Angular 22
+* TypeScript
+* ASP.NET Core Web API (.NET 8)
+* Entity Framework Core
+* SQL Server
+* REST APIs
+
+## Features
+
+* View employee records
+* Add new employees
+* Edit employee information
+* Delete employees
+* REST API integration
+* Asynchronous HTTP communication using `HttpClient` and Observables
+* Angular service-based API communication
+* Responsive user interface
+
+## Application Architecture
+
+```text
+Angular UI
+    ↓
+EmployeeService
+    ↓
+HttpClient
+    ↓
+ASP.NET Core Web API
+    ↓
+Service Layer
+    ↓
+Entity Framework Core
+    ↓
+SQL Server
+```
+
+The Angular application communicates with the ASP.NET Core API through HTTP requests. The backend handles business logic and database operations using Entity Framework Core and SQL Server.
+
+## CRUD Workflow
+
+The application supports the complete employee management lifecycle:
+
+```text
+Create → Read → Update → Delete
+```
+
+Changes made through the Angular interface are sent to the ASP.NET Core API and persisted in the SQL Server database.
+
+## Project Structure
+
+```text
+src/
+└── app/
+    ├── app.ts
+    ├── app.html
+    ├── app.css
+    ├── app.config.ts
+    ├── app.routes.ts
+    └── employee.ts
+```
+
+`employee.ts` contains the `Employee` model and `EmployeeService`, which handles communication with the backend API.
+
+## Development Server
+
+Install the project dependencies:
+
+```bash
+npm install
+```
+
+Start the Angular development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open the application at:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Backend
 
-```bash
-ng generate --help
+This frontend requires the corresponding ASP.NET Core Web API to be running.
+
+Backend repository:
+
+`EmployeeManagement-ASP.NET-Core`
+
+The Angular application is configured to communicate with the backend API through:
+
+```text
+https://localhost:7049/api/Employees
 ```
 
-## Building
+## Future Improvements
 
-To build the project run:
+Planned improvements include:
 
-```bash
-ng build
-```
+* Angular routing and feature-based component structure
+* Reactive Forms
+* Advanced form validation
+* Loading and error states
+* Authentication and authorization
+* Pagination and search
+* Improved frontend architecture
+* Automated testing
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Purpose
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project represents my first practical Angular application and demonstrates the integration of an Angular frontend with an ASP.NET Core backend to create a complete end-to
