@@ -1,0 +1,243 @@
+/* Overall page */
+:host {
+  display: block;
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #f4f6f8;
+  font-family: Arial, sans-serif;
+}
+
+/* Main heading */
+h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #1f2937;
+}
+
+/* Section headings */
+h2 {
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  display: inline-block;
+  width: 100px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Input fields */
+input {
+  width: 300px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Buttons */
+button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Employee table */
+table {
+  width: 100%;
+  margin-top: 40px;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background-color: #1f2937;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Add employee card */
+.employee-form {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.employee-form h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* Form layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Individual field */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  width: auto;
+  margin-bottom: 8px;
+}
+
+/* Inputs inside the form */
+.form-group input {
+  width: 100%;
+}
+
+/* Add button */
+.primary-button {
+  margin-top: 25px;
+}
+
+/* Employee list card */
+.employee-list {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.employee-list h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Table */
+.employee-list table {
+  width: 100%;
+  margin-top: 0;
+  border-collapse: collapse;
+}
+
+/* Table cells */
+.employee-list th,
+.employee-list td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Table header */
+.employee-list th {
+  background-color: #1f2937;
+  color: white;
+}
+
+/* Row hover */
+.employee-list tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Action buttons */
+.employee-list td button {
+  margin-right: 6px;
+}
+
+/* Edit employee card */
+.edit-form {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.edit-form h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* Edit buttons */
+.edit-actions {
+  margin-top: 25px;
+}
+
+.cancel-button {
+  background-color: #6b7280;
+}
+
+.cancel-button:hover {
+  background-color: #4b5563;
+}
+
+.edit-button {
+  background-color: #2563eb;
+}
+
+.edit-button:hover {
+  background-color: #1d4ed8;
+}
+
+.delete-button {
+  background-color: #dc2626;
+}
+
+.delete-button:hover {
+  background-color: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  :host {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-form,
+  .employee-list,
+  .edit-form {
+    padding: 20px;
+  }
+
+  .employee-list {
+    overflow-x: auto;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+}
